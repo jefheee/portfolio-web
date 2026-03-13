@@ -80,7 +80,7 @@ export default function Portfolio() {
           >
             {/* Espaço para sua foto. Substitua o src depois */}
             <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full border-4 border-white shadow-xl overflow-hidden">
-                <img src="/sua-foto.jpg" alt="Jefherson Luiz" className="w-full h-full object-cover" />
+                <img src="/fotogmn.png" alt="Jefherson Luiz" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </section>
