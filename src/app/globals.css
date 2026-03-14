@@ -1,9 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Adicionamos uma cor de fundo global limpa (cinza muito claro/quase branco ou modo escuro suave) */
 body {
   background-color: #FAFAFA; /* Branco gelo */
   color: #1A1A1A; /* Preto suave para texto */
-}
