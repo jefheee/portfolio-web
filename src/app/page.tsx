@@ -20,6 +20,7 @@ export default function Portfolio() {
           <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
             <a href="#inicio" className="hover:text-black transition-colors">Início</a>
             <a href="#sobre" className="hover:text-black transition-colors">Sobre</a>
+            <a href="#experiencia" className="hover:text-black transition-colors">Experiência</a>
             <a href="#projetos" className="hover:text-black transition-colors">Projetos</a>
           </nav>
 
@@ -29,7 +30,7 @@ export default function Portfolio() {
           </button>
         </div>
 
-        {/* Mobile Nav (AnimatePresence para animar montagem/desmontagem) */}
+        {/* Mobile Nav */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.nav
@@ -41,6 +42,7 @@ export default function Portfolio() {
             >
               <a href="#inicio" onClick={toggleMenu} className="text-lg font-medium text-gray-600 hover:text-black">Início</a>
               <a href="#sobre" onClick={toggleMenu} className="text-lg font-medium text-gray-600 hover:text-black">Sobre</a>
+              <a href="#experiencia" onClick={toggleMenu} className="text-lg font-medium text-gray-600 hover:text-black">Experiência</a>
               <a href="#projetos" onClick={toggleMenu} className="text-lg font-medium text-gray-600 hover:text-black">Projetos</a>
             </motion.nav>
           )}
@@ -112,49 +114,79 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Experiência Profissional Section */}
+        <section id="experiencia" className="max-w-6xl mx-auto px-6 py-24">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Experiência Profissional</h2>
+          <div className="max-w-3xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="border-l-2 border-gray-200 pl-8 py-2 relative"
+            >
+              <div className="absolute w-4 h-4 bg-gray-900 rounded-full -left-[9px] top-4 border-4 border-white"></div>
+              <h3 className="text-2xl font-bold text-gray-900">Jovem Aprendiz</h3>
+              <div className="flex items-center gap-2 text-gray-600 mt-1 mb-4">
+                <Icons.Briefcase size={16} />
+                <span className="font-medium">Dental Speed - Henry Schein</span>
+                <span>•</span>
+                <span>Junho/2023 - Junho/2025</span>
+              </div>
+              <ul className="space-y-3 text-gray-600 list-disc list-inside ml-2">
+                <li>Atuação em suporte operacional e administrativo em ambiente corporativo de alto volume.</li>
+                <li>Apoio ao Planejamento e Controle da Produção (PCP), utilizando ferramentas digitais para acompanhamento de fluxos e metas operacionais.</li>
+                <li>Gestão de dados operacionais e auxílio no controle de inventário, garantindo a precisão dos processos e o cumprimento de prazos.</li>
+                <li>Desenvolvimento de maturidade profissional, agilidade na resolução de problemas e comunicação interpessoal.</li>
+              </ul>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Projetos Section */}
-        <section id="projetos" className="max-w-6xl mx-auto px-6 py-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Projetos em Destaque</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            {/* Card Projeto 1 */}
-            <motion.a 
-              href="https://github.com/jefheee/ulife-portal-redesign" target="_blank"
-              whileHover={{ y: -5 }}
-              className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
-            >
-              <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200 p-6">
-                <span className="text-gray-400 font-medium">Ulife Portal Redesign</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:underline">Ulife Portal Redesign</h3>
-                <p className="text-gray-600 mb-4 text-sm">Redesign moderno do portal universitário focado em UX/UI. Construído do zero utilizando tecnologias modernas de front-end.</p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">React</span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Tailwind CSS</span>
+        <section id="projetos" className="bg-[#FAFAFA] py-24 border-y border-gray-100">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Projetos em Destaque</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              {/* Card Projeto 1 */}
+              <motion.a 
+                href="https://github.com/jefheee/ulife-portal-redesign" target="_blank"
+                whileHover={{ y: -5 }}
+                className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
+              >
+                <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200 p-6">
+                  <span className="text-gray-400 font-medium">Ulife Portal Redesign</span>
                 </div>
-              </div>
-            </motion.a>
-
-            {/* Card Projeto 2 */}
-            <motion.a 
-              href="https://github.com/jefheee/System-Optimizer-Tool" target="_blank"
-              whileHover={{ y: -5 }}
-              className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
-            >
-              <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200 p-6">
-                <span className="text-gray-400 font-medium">System Optimizer Tool</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:underline">System Optimizer Tool</h3>
-                <p className="text-gray-600 mb-4 text-sm">Utilitário CLI robusto para limpeza profunda, redução de latência e otimização de performance do Windows.</p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">PowerShell</span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Batch</span>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:underline">Ulife Portal Redesign</h3>
+                  <p className="text-gray-600 mb-4 text-sm">Redesign moderno do portal universitário focado em UX/UI. Construído do zero utilizando tecnologias modernas de front-end.</p>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">React</span>
+                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Tailwind CSS</span>
+                  </div>
                 </div>
-              </div>
-            </motion.a>
+              </motion.a>
 
+              {/* Card Projeto 2 */}
+              <motion.a 
+                href="https://github.com/jefheee/System-Optimizer-Tool" target="_blank"
+                whileHover={{ y: -5 }}
+                className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
+              >
+                <div className="h-48 bg-gray-100 flex items-center justify-center border-b border-gray-200 p-6">
+                  <span className="text-gray-400 font-medium">System Optimizer Tool</span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:underline">System Optimizer Tool</h3>
+                  <p className="text-gray-600 mb-4 text-sm">Utilitário CLI robusto para limpeza profunda, redução de latência e otimização de performance do Windows.</p>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">PowerShell</span>
+                    <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Batch</span>
+                  </div>
+                </div>
+              </motion.a>
+
+            </div>
           </div>
         </section>
       </main>
