@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Terminal, Database, Cloud, Github, Linkedin, Mail } from "lucide-react";
+import * as Icons from "lucide-react";
 
 export default function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Portfolio() {
 
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu} className="md:hidden text-gray-900">
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <Icons.X size={28} /> : <Icons.Menu size={28} />}
           </button>
         </div>
 
@@ -80,7 +80,7 @@ export default function Portfolio() {
           >
             {/* Espaço para sua foto. Substitua o src depois */}
             <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full border-4 border-white shadow-xl overflow-hidden">
-                <img src="/fotogmn.png" alt="Jefherson Luiz" className="w-full h-full object-cover" />
+            <img src="https://github.com/jefheee.png" alt="Jefherson Luiz" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </section>
@@ -92,19 +92,19 @@ export default function Portfolio() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               <motion.div whileHover={{ scale: 1.02 }} className="p-8 border border-gray-100 rounded-2xl bg-[#FAFAFA] hover:shadow-sm transition-all">
-                <Terminal className="w-10 h-10 text-gray-700 mb-6" />
+                <Icons.Terminal className="w-10 h-10 text-gray-700 mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Desenvolvimento Web</h3>
                 <p className="text-gray-600">Criação de interfaces modernas com React, Tailwind CSS e TypeScript, focando em usabilidade e performance.</p>
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.02 }} className="p-8 border border-gray-100 rounded-2xl bg-[#FAFAFA] hover:shadow-sm transition-all">
-                <Database className="w-10 h-10 text-gray-700 mb-6" />
+                <Icons.Database className="w-10 h-10 text-gray-700 mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Backend & Dados</h3>
                 <p className="text-gray-600">Lógica de programação com Java, modelagem de banco de dados e consultas avançadas em SQL.</p>
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.02 }} className="p-8 border border-gray-100 rounded-2xl bg-[#FAFAFA] hover:shadow-sm transition-all">
-                <Cloud className="w-10 h-10 text-gray-700 mb-6" />
+                <Icons.Cloud className="w-10 h-10 text-gray-700 mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Infra e Automação</h3>
                 <p className="text-gray-600">Criação de scripts em PowerShell/Batch, otimização de sistemas Windows/Linux e noções de arquitetura Cloud.</p>
               </motion.div>
@@ -135,7 +135,8 @@ export default function Portfolio() {
                   <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Tailwind CSS</span>
                 </div>
               </div>
-            </motion.a>
+              <motion.a 
+                href="https://github.com/jefheee/ulife-portal-redesign" target="_blank"
 
             {/* Card Projeto 2 */}
             <motion.a 
@@ -154,7 +155,8 @@ export default function Portfolio() {
                   <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Batch</span>
                 </div>
               </div>
-            </motion.a>
+              <motion.a 
+               href="https://github.com/jefheee/System-Optimizer-Tool" target="_blank"
 
           </div>
         </section>
@@ -168,13 +170,13 @@ export default function Portfolio() {
           
           <div className="flex gap-6 mt-4">
             <a href="https://github.com/jefheee" target="_blank" className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
-              <Github size={24} />
+              <Icons.Github size={24} />
             </a>
             <a href="https://www.linkedin.com/in/jefhersonluiz/" target="_blank" className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
-              <Linkedin size={24} />
+              <Icons.Linkedin size={24} />
             </a>
             <a href="mailto:jefhersonluiz08@gmail.com" className="p-3 bg-gray-800 rounded-full hover:bg-white hover:text-gray-900 transition-colors">
-              <Mail size={24} />
+              <Icons.Mail size={24} />
             </a>
           </div>
           
