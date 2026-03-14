@@ -81,7 +81,7 @@ export default function Portfolio() {
             className="flex-1 flex justify-center md:justify-end"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full border-4 border-white shadow-xl overflow-hidden">
-            <img src="https://github.com/jefheee.png" alt="Jefherson Luiz" className="w-full h-full object-cover" />
+            <img src="/perfil.jpeg" alt="Jefherson Luiz" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </section>
