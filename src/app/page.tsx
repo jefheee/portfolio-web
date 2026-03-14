@@ -78,7 +78,6 @@ export default function Portfolio() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1 flex justify-center md:justify-end"
           >
-            {/* Espaço para sua foto. Substitua o src depois */}
             <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-200 rounded-full border-4 border-white shadow-xl overflow-hidden">
             <img src="https://github.com/jefheee.png" alt="Jefherson Luiz" className="w-full h-full object-cover" />
             </div>
@@ -120,7 +119,7 @@ export default function Portfolio() {
             
             {/* Card Projeto 1 */}
             <motion.a 
-              href="https://github.com/jefheee" target="_blank"
+              href="https://github.com/jefheee/ulife-portal-redesign" target="_blank"
               whileHover={{ y: -5 }}
               className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
             >
@@ -135,12 +134,11 @@ export default function Portfolio() {
                   <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Tailwind CSS</span>
                 </div>
               </div>
-              <motion.a 
-                href="https://github.com/jefheee/ulife-portal-redesign" target="_blank"
+            </motion.a>
 
             {/* Card Projeto 2 */}
             <motion.a 
-              href="https://github.com/jefheee" target="_blank"
+              href="https://github.com/jefheee/System-Optimizer-Tool" target="_blank"
               whileHover={{ y: -5 }}
               className="group block border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md transition-all"
             >
@@ -155,8 +153,7 @@ export default function Portfolio() {
                   <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Batch</span>
                 </div>
               </div>
-              <motion.a 
-               href="https://github.com/jefheee/System-Optimizer-Tool" target="_blank"
+            </motion.a>
 
           </div>
         </section>
